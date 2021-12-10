@@ -14,10 +14,14 @@
         <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/app_bar_main.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/content_main.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/fragment_bienvenida.xml" value="0.22" />
+        <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/fragment_consulta_lista_usuario_imagen_url.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/fragment_consutar_listausuario_imagen.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/fragment_desarrollador.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/fragment_registrar_usuario.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/nav_header_main.xml" value="0.25" />
         <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/usuarios_list.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/usuarios_list_image.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/menu/activity_main_drawer.xml" value="0.20520833333333333" />
       </map>
     </option>
   </component>

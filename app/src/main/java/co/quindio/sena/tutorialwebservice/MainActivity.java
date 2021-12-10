@@ -99,18 +99,14 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_consulta_individual) {
             miFragment=new ConsultarUsuarioFragment();
             fragmentSeleccionado=true;
-        } else if (id == R.id.nav_consulta_Url) {
-            miFragment=new ConsultaUsuarioUrlFragment();
-            fragmentSeleccionado=true;
+
         } else if (id == R.id.nav_consulta_gral) {
             miFragment=new ConsultarListaUsuariosFragment();
             fragmentSeleccionado=true;
         } else if (id == R.id.nav_consulta_gral_img) {
             miFragment=new ConsutarListausuarioImagenFragment();
             fragmentSeleccionado=true;
-        }else if (id == R.id.nav_consulta_gral_img_url) {
-            miFragment=new ConsultaListaUsuarioImagenUrlFragment();
-            fragmentSeleccionado=true;
+
         } else if (id == R.id.nav_desarrollador) {
             miFragment=new DesarrolladorFragment();
             fragmentSeleccionado=true;
