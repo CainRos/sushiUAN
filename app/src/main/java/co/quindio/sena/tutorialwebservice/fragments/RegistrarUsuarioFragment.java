@@ -88,7 +88,7 @@ public class RegistrarUsuarioFragment extends Fragment {
     private static final int COD_SELECCIONA = 10;
     private static final int COD_FOTO = 20;
 
-    EditText campoNombre,campoDocumento,campoProfesion;
+    EditText campoNombre,campoDocumento,campoProfesion,campoDetalles;
     Button botonRegistro,btnFoto;
     ImageView imgFoto;
     ProgressDialog progreso;
@@ -139,22 +139,12 @@ public class RegistrarUsuarioFragment extends Fragment {
         campoDocumento= (EditText) vista.findViewById(R.id.campoDoc);
         campoNombre= (EditText) vista.findViewById(R.id.campoNombre);
         campoProfesion= (EditText) vista.findViewById(R.id.campoProfesion);
+        campoDetalles =(EditText) vista.findViewById(R.id.campoDescripcion);
         botonRegistro= (Button) vista.findViewById(R.id.btnRegistrar);
-        btnFoto=(Button)vista.findViewById(R.id.btnFoto);
 
-        imgFoto=(ImageView)vista.findViewById(R.id.imgFoto);
 
 
         layoutRegistrar= (RelativeLayout) vista.findViewById(R.id.idLayoutRegistrar);
-
-       // request= Volley.newRequestQueue(getContext());
-
-        //Permisos
-        if(solicitaPermisosVersionesSuperiores()){
-            btnFoto.setEnabled(true);
-        }else{
-          btnFoto.setEnabled(false);
-        }
 
 
         botonRegistro.setOnClickListener(new View.OnClickListener() {
@@ -164,133 +154,23 @@ public class RegistrarUsuarioFragment extends Fragment {
             }
         });
 
-        btnFoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mostrarDialogOpciones();
-            }
-        });
 
         return vista;
     }
 
-    private void mostrarDialogOpciones() {
-        final CharSequence[] opciones={"Tomar Foto","Elegir de Galeria","Cancelar"};
-        final AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
-        builder.setTitle("Elige una Opción");
-        builder.setItems(opciones, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                if (opciones[i].equals("Tomar Foto")){
-                    abriCamara();
-                }else{
-                    if (opciones[i].equals("Elegir de Galeria")){
-                        Intent intent=new Intent(Intent.ACTION_PICK,
-                                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                        intent.setType("image/");
-                        startActivityForResult(intent.createChooser(intent,"Seleccione"),COD_SELECCIONA);
-                    }else{
-                        dialogInterface.dismiss();
-                    }
-                }
-            }
-        });
-        builder.show();
-    }
 
-    private void abriCamara() {
-        File miFile=new File(Environment.getExternalStorageDirectory(),DIRECTORIO_IMAGEN);
-        boolean isCreada=miFile.exists();
 
-        if(isCreada==false){
-            isCreada=miFile.mkdirs();
-        }
 
-        if(isCreada==true){
-            Long consecutivo= System.currentTimeMillis()/1000;
-            String nombre=consecutivo.toString()+".jpg";
-
-            path=Environment.getExternalStorageDirectory()+File.separator+DIRECTORIO_IMAGEN
-                        +File.separator+nombre;//indicamos la ruta de almacenamiento
-
-            fileImagen=new File(path);
-
-            Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            intent.putExtra(MediaStore.EXTRA_OUTPUT,Uri.fromFile(fileImagen));
-
-            ////
-            if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N)
-            {
-                String authorities=getContext().getPackageName()+".provider";
-                Uri imageUri= FileProvider.getUriForFile(getContext(),authorities,fileImagen);
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-            }else
-            {
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(fileImagen));
-            }
-            startActivityForResult(intent,COD_FOTO);
-
-            ////
-
-        }
-
-    }
 
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        switch (requestCode){
-            case COD_SELECCIONA:
-                Uri miPath=data.getData();
-                imgFoto.setImageURI(miPath);
-
-                try {
-                    bitmap=MediaStore.Images.Media.getBitmap(getContext().getContentResolver(),miPath);
-                    imgFoto.setImageBitmap(bitmap);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                break;
-            case COD_FOTO:
-                MediaScannerConnection.scanFile(getContext(), new String[]{path}, null,
-                        new MediaScannerConnection.OnScanCompletedListener() {
-                            @Override
-                            public void onScanCompleted(String path, Uri uri) {
-                                Log.i("Path",""+path);
-                            }
-                        });
-
-                bitmap= BitmapFactory.decodeFile(path);
-                imgFoto.setImageBitmap(bitmap);
-
-                break;
-        }
-        bitmap=redimensionarImagen(bitmap,600,800);
-    }
-
-    private Bitmap redimensionarImagen(Bitmap bitmap, float anchoNuevo, float altoNuevo) {
-
-        int ancho=bitmap.getWidth();
-        int alto=bitmap.getHeight();
-
-        if(ancho>anchoNuevo || alto>altoNuevo){
-            float escalaAncho=anchoNuevo/ancho;
-            float escalaAlto= altoNuevo/alto;
-
-            Matrix matrix=new Matrix();
-            matrix.postScale(escalaAncho,escalaAlto);
-
-            return Bitmap.createBitmap(bitmap,0,0,ancho,alto,matrix,false);
-
-        }else{
-            return bitmap;
-        }
-
 
     }
+
+
 
 
     //permisos
@@ -367,7 +247,7 @@ public class RegistrarUsuarioFragment extends Fragment {
         dialogo.show();
     }
 
-    ///////////////
+
 
 
 
@@ -412,13 +292,11 @@ public class RegistrarUsuarioFragment extends Fragment {
                 String nombre=campoNombre.getText().toString();
                 String profesion=campoProfesion.getText().toString();
 
-                String imagen=convertirImgString(bitmap);
 
                 Map<String,String> parametros=new HashMap<>();
                 parametros.put("documento",documento);
                 parametros.put("nombre",nombre);
                 parametros.put("profesion",profesion);
-                parametros.put("imagen",imagen);
 
                 return parametros;
             }
@@ -428,15 +306,7 @@ public class RegistrarUsuarioFragment extends Fragment {
         VolleySingleton.getIntanciaVolley(getContext()).addToRequestQueue(stringRequest);
     }
 
-    private String convertirImgString(Bitmap bitmap) {
 
-        ByteArrayOutputStream array=new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG,100,array);
-        byte[] imagenByte=array.toByteArray();
-        String imagenString= Base64.encodeToString(imagenByte,Base64.DEFAULT);
-
-        return imagenString;
-    }
 
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -464,17 +334,6 @@ public class RegistrarUsuarioFragment extends Fragment {
     }
 
 
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

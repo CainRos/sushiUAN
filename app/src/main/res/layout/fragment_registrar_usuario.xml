@@ -33,15 +33,6 @@
                 android:layout_weight="2"
                 android:hint="Documento"/>
 
-            <Button
-                android:id="@+id/btnFoto"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:text="Foto"
-                android:layout_gravity="center"
-                android:background="@color/colorAccent"
-                android:textColor="@android:color/white" />
-
         </LinearLayout>
 
         <EditText
@@ -56,15 +47,12 @@
             android:layout_height="wrap_content"
             android:hint="Profesion"/>
 
+        <EditText
+            android:id="@+id/campoDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Detalles del Pedido" />
 
-        <ImageView
-            android:id="@+id/imgFoto"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:src="@drawable/img_base"
-            android:layout_gravity="center"
-            android:layout_below="@+id/linearLayout"
-            android:layout_centerHorizontal="true" />
 
     </LinearLayout>
 
