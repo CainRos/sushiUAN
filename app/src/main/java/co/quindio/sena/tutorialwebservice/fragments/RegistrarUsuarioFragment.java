@@ -258,7 +258,7 @@ public class RegistrarUsuarioFragment extends Fragment {
         progreso.setMessage("Cargando...");
         progreso.show();
 
-        String ip="192.168.100.4";
+        String ip="localhost";
 
         String url=ip+"/ejemploBDRemota/wsJSONRegistroMovil.php?";
 
