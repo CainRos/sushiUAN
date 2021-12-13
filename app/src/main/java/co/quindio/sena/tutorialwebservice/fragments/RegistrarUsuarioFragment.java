@@ -260,8 +260,9 @@ public class RegistrarUsuarioFragment extends Fragment {
 
 
 
+        //http://192.168.0.23/ejemploBDRemota/wsJSONRegistroMovil.php
 
-        String url="http://192.168.0.23/ejemploBDRemota/wsJSONRegistro.php?documento="+campoDocumento.getText().toString()+"&nombre="+campoNombre.getText().toString()+
+        String url="http://192.168.0.23/ejemploBDRemota/wsJSONRegistroMovil.php?documento="+campoDocumento.getText().toString()+"&nombre="+campoNombre.getText().toString()+
         "&profesion="+campoProfesion.getText().toString();
 
         url=url.replace(" ","%20");
@@ -272,7 +273,7 @@ public class RegistrarUsuarioFragment extends Fragment {
             public void onResponse(String response) {
                 progreso.hide();
 
-                if (response.trim().equalsIgnoreCase("registra")){
+                if (!response.trim().equalsIgnoreCase("registra")){
                     campoNombre.setText("");
                     campoDocumento.setText("");
                     campoProfesion.setText("");

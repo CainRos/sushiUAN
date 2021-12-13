@@ -116,9 +116,7 @@ public class ConsultarListaUsuariosFragment extends Fragment implements Response
         progress.setMessage("Consultando...");
         progress.show();
 
-        String ip=getString(R.string.ip);
-
-        String url=ip+"/ejemploBDRemota/wsJSONConsultarLista.php";
+        String url = "https://sushiuan.000webhostapp.com/wsJSONConsultarLista.php";
 
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET,url,null,this,this);
        // request.add(jsonObjectRequest);
