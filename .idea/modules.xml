@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TutorialWebService-master.iml" filepath="$PROJECT_DIR$/.idea/modules/TutorialWebService-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TutorialWebService-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TutorialWebService-master.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sushiUAN.iml" filepath="$PROJECT_DIR$/.idea/modules/sushiUAN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/sushiUAN.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/sushiUAN.app.iml" />
     </modules>
   </component>
 </project>

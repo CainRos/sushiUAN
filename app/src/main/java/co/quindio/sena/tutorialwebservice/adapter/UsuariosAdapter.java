@@ -11,9 +11,7 @@ import java.util.List;
 import co.quindio.sena.tutorialwebservice.R;
 import co.quindio.sena.tutorialwebservice.entidades.Usuario;
 
-/**
- * Created by CHENAO on 6/08/2017.
- */
+
 
 public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosAdapter.UsuariosHolder>{
 

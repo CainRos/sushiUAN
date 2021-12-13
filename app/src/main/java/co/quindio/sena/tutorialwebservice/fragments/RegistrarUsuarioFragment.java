@@ -258,9 +258,13 @@ public class RegistrarUsuarioFragment extends Fragment {
         progreso.setMessage("Cargando...");
         progreso.show();
 
-        String ip="localhost";
 
-        String url=ip+"/ejemploBDRemota/wsJSONRegistroMovil.php?";
+
+
+        String url="http://192.168.0.23/ejemploBDRemota/wsJSONRegistro.php?documento="+campoDocumento.getText().toString()+"&nombre="+campoNombre.getText().toString()+
+        "&profesion="+campoProfesion.getText().toString();
+
+        url=url.replace(" ","%20");
 
         stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
 
