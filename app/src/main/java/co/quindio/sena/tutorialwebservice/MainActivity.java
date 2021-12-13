@@ -11,10 +11,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import co.quindio.sena.tutorialwebservice.fragments.BienvenidaFragment;
 import co.quindio.sena.tutorialwebservice.fragments.ConsultarListaUsuariosFragment;
-import co.quindio.sena.tutorialwebservice.fragments.ConsultarUsuarioFragment;
 import co.quindio.sena.tutorialwebservice.fragments.ConsutarListausuarioImagenFragment;
 import co.quindio.sena.tutorialwebservice.fragments.DesarrolladorFragment;
 import co.quindio.sena.tutorialwebservice.fragments.RegistrarUsuarioFragment;
@@ -90,9 +90,6 @@ public class MainActivity extends AppCompatActivity
             fragmentSeleccionado=true;
         }else if (id == R.id.nav_registro) {
             miFragment=new RegistrarUsuarioFragment();
-            fragmentSeleccionado=true;
-        } else if (id == R.id.nav_consulta_individual) {
-            miFragment=new ConsultarUsuarioFragment();
             fragmentSeleccionado=true;
 
         } else if (id == R.id.nav_consulta_gral) {

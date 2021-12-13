@@ -26,6 +26,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -124,6 +125,7 @@ public class RegistrarUsuarioFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -166,6 +168,11 @@ public class RegistrarUsuarioFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+
+    }
+
+    private void caca(){
 
 
     }
@@ -259,8 +266,6 @@ public class RegistrarUsuarioFragment extends Fragment {
         progreso.show();
 
 
-
-        //http://192.168.0.23/ejemploBDRemota/wsJSONRegistroMovil.php
 
         String url="http://192.168.0.23/ejemploBDRemota/wsJSONRegistroMovil.php?documento="+campoDocumento.getText().toString()+"&nombre="+campoNombre.getText().toString()+
         "&profesion="+campoProfesion.getText().toString();

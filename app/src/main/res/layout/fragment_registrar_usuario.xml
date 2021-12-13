@@ -47,15 +47,26 @@
             android:layout_height="wrap_content"
             android:hint="Telefono"/>
 
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Buscar Producto" />
+
+        <ListView
+            android:id="@+id/carrito"
+            android:layout_width="match_parent"
+            android:layout_height="217dp"
+            android:divider="@color/colorAccent"
+            android:dividerHeight="2dp"
+            android:background="@drawable/border_list"
+            />
+
         <EditText
             android:id="@+id/campoDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Detalles del Pedido" />
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="393dp" />
 
 
     </LinearLayout>
@@ -64,11 +75,11 @@
         android:id="@+id/btnRegistrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registrar"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:background="@color/colorAccent"
+        android:text="Registrar"
         android:textColor="@android:color/white" />
 
 

@@ -4,7 +4,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_inicio"
-            android:icon="@android:drawable/ic_menu_info_details"
+            android:icon="@drawable/ic_action_name"
             android:title="Inicio" />
 
         <item
@@ -12,13 +12,9 @@
             android:icon="@android:drawable/ic_menu_add"
             android:title="Registrar Compra" />
         <item
-            android:id="@+id/nav_consulta_individual"
-            android:icon="@android:drawable/ic_menu_search"
-            android:title="Consultar Usuario" />
-        <item
             android:id="@+id/nav_consulta_gral"
-            android:icon="@android:drawable/ic_menu_search"
-            android:title="Consultar Lista de Usuarios" />
+            android:icon="@drawable/ic_icon_orden"
+            android:title="Pedidos" />
         <item
             android:id="@+id/nav_consulta_gral_img"
             android:icon="@android:drawable/ic_menu_search"

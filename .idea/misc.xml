@@ -23,7 +23,30 @@
         <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/layout/usuarios_list_image.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/menu/activity_main_drawer.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/CainGames/Downloads/TutorialWebService-master/TutorialWebService-master/app/src/main/res/menu/main.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/fragment_registrar_usuario.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.3277777777777778" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable-v21/ic_menu_camera.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable-v21/ic_menu_gallery.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable-v21/ic_menu_manage.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable-v21/ic_menu_send.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable-v21/ic_menu_share.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable/border_list.xml" value="0.3828125" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable/ic_icono_orden.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable/ic_menu_orden.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/drawable/side_nav_bar.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/app_bar_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/fragment_bienvenida.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/fragment_consulta_lista_usuario_imagen_url.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/fragment_consulta_usuario_url.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/fragment_consultar_lista_usuarios.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/fragment_consultar_usuario.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/fragment_consutar_listausuario_imagen.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/fragment_desarrollador.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/fragment_registrar_usuario.xml" value="0.1" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/layout/nav_header_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
+        <entry key="..\:/Users/CainGames/StudioProjects/sushiUAN/app/src/main/res/menu/main.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
