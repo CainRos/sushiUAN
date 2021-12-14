@@ -32,9 +32,9 @@ public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosAdapter.Usuari
 
     @Override
     public void onBindViewHolder(UsuariosHolder holder, int position) {
-        holder.txtDocumento.setText(listaUsuarios.get(position).getDocumento().toString());
+        holder.txtDocumento.setText(listaUsuarios.get(position).getTelefono().toString());
         holder.txtNombre.setText(listaUsuarios.get(position).getNombre().toString());
-        holder.txtProfesion.setText(listaUsuarios.get(position).getProfesion().toString());
+        holder.txtProfesion.setText(listaUsuarios.get(position).getDomicilio().toString());
     }
 
     @Override

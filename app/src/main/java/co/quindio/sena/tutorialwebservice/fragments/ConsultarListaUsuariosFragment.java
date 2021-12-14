@@ -116,8 +116,8 @@ public class ConsultarListaUsuariosFragment extends Fragment implements Response
         progress.setMessage("Consultando...");
         progress.show();
 
-       // String url = "https://sushiuan.000webhostapp.com/wsJSONConsultarLista.php";
-          String url = "http://192.168.0.23/ejemploBDRemota/wsJSONConsultarLista.php";
+       String url = "https://sushiuan.000webhostapp.com/SushiUAN/wsJSONConsultarLista.php";
+        //String url = "http://192.168.0.23/ejemploBDRemota/wsJSONConsultarLista.php";
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET,url,null,this,this);
        // request.add(jsonObjectRequest);
         VolleySingleton.getIntanciaVolley(getContext()).addToRequestQueue(jsonObjectRequest);
@@ -144,9 +144,9 @@ public class ConsultarListaUsuariosFragment extends Fragment implements Response
                 JSONObject jsonObject=null;
                 jsonObject=json.getJSONObject(i);
 
-                usuario.setDocumento(jsonObject.optInt("documento"));
                 usuario.setNombre(jsonObject.optString("nombre"));
-                usuario.setProfesion(jsonObject.optString("profesion"));
+                usuario.setTelefono(jsonObject.optInt("telefono"));
+                usuario.setDomicilio(jsonObject.optString("domicilio"));
                 listaUsuarios.add(usuario);
             }
             progress.hide();

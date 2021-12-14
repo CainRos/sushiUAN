@@ -10,9 +10,9 @@ import android.util.Base64;
 
 public class Usuario {
 
-    private Integer documento;
+    private Integer telefono;
     private String nombre;
-    private String profesion;
+    private String domicilio;
     private String dato;
     private Bitmap imagen;
     private String rutaImagen;
@@ -26,8 +26,8 @@ public class Usuario {
         this.rutaImagen = rutaImagen;
     }
 
-    public Integer getDocumento() {
-        return documento;
+    public Integer getTelefono() {
+        return telefono;
     }
 
     public String getDato() {
@@ -61,8 +61,8 @@ public class Usuario {
         this.imagen = imagen;
     }
 
-    public void setDocumento(Integer documento) {
-        this.documento = documento;
+    public void setTelefono(Integer telefono) {
+        this.telefono = telefono;
     }
 
     public String getNombre() {
@@ -73,11 +73,11 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getProfesion() {
-        return profesion;
+    public String getDomicilio() {
+        return domicilio;
     }
 
-    public void setProfesion(String profesion) {
-        this.profesion = profesion;
+    public void setDomicilio(String domicilio) {
+        this.domicilio = domicilio;
     }
 }

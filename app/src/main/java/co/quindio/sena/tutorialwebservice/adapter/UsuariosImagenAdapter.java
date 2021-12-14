@@ -35,9 +35,9 @@ public class UsuariosImagenAdapter extends RecyclerView.Adapter<UsuariosImagenAd
 
     @Override
     public void onBindViewHolder(UsuariosHolder holder, int position) {
-        holder.txtDocumento.setText(listaUsuarios.get(position).getDocumento().toString());
+        holder.txtDocumento.setText(listaUsuarios.get(position).getTelefono().toString());
         holder.txtNombre.setText(listaUsuarios.get(position).getNombre().toString());
-        holder.txtProfesion.setText(listaUsuarios.get(position).getProfesion().toString());
+        holder.txtProfesion.setText(listaUsuarios.get(position).getDomicilio().toString());
 
         if (listaUsuarios.get(position).getImagen()!=null){
             holder.imagen.setImageBitmap(listaUsuarios.get(position).getImagen());

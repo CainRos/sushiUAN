@@ -138,9 +138,9 @@ public class ConsutarListausuarioImagenFragment extends Fragment
                 JSONObject jsonObject=null;
                 jsonObject=json.getJSONObject(i);
 
-                usuario.setDocumento(jsonObject.optInt("documento"));
+                usuario.setTelefono(jsonObject.optInt("documento"));
                 usuario.setNombre(jsonObject.optString("nombre"));
-                usuario.setProfesion(jsonObject.optString("profesion"));
+                usuario.setDomicilio(jsonObject.optString("profesion"));
                 usuario.setDato(jsonObject.optString("imagen"));
                 listaUsuarios.add(usuario);
             }
